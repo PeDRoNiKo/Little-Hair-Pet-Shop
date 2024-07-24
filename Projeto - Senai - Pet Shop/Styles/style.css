@@ -1,0 +1,183 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+}
+
+/* TODAS as variáveis globais que serão utilizadas em todo o projeto! */
+:root {
+  /* Cores */
+  --primary-color: #6A5ACD; /* Azul Royal */
+  --secondary-color: #e2e2e2; /* Dourado */
+  --background-color: #F0F0F0; /* Cinza Claro */
+  --text-color: #333333; /* Preto Cinza */
+  --white-color: #FFFFFF; /* Branco */
+  --accent-color: #FF69B4; /* Rosa Choque */
+  --hover-color: #EEEDF2; /* Azul Claro */
+
+  /* Tipografia */
+  --font-family: 'Arial, sans-serif';
+  --font-size-base: 16px;
+  --font-size-large: 24px;
+  --font-size-small: 14px;
+
+  /* Espaçamento (Baseado no Grid de 8px) */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 32px;
+  --spacing-xl: 64px;
+
+  /* Bordas */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 16px;
+
+  /* Sombreamento */
+  --box-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --box-shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --box-shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
+
+  /* Transições */
+  --transition-speed: 0.3s;
+  --transition-ease: ease-in-out;
+}
+/* Fim das Variáveis globais */
+
+/* Estilo do Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background-color: var(--white-color);
+  color: #ffffff;
+  box-shadow: var(--box-shadow-sm);
+}
+
+header .logo img{
+  height: 40px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+header nav ul li {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm);
+    font-weight: 600;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+/* Fim do Estilo do Header */
+
+
+/* Estilo do Conteúdo Principal */
+.banner {
+  background-color: var(--secondary-color);
+  text-align: center;
+  padding: 32px;
+  border-radius: 16px;
+  height: 270px;
+}
+
+.banner {
+  background-image: url(../Images/Pets-Banner-ADS.png);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: 400px;
+  background-position-y: bottom;
+}
+
+.ads {
+  display: grid;
+  justify-content: end;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: 55% 15%;
+  max-width: 1150px;
+  margin: var(--spacing-xl) auto;
+}
+
+.banner h1 {
+  color: var(--text-color);
+  font-family: "Nerko One", cursive;
+  font-size: 40px;
+}
+
+.banner .discount {
+  font-size: 1.2em;
+  color: var(--primary-color);
+}
+
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 32px 0;
+}
+
+.category {
+  flex: 1 1 calc(33.333% - 16px);
+  background-color: #ffffff;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.category img {
+  max-width: 100%;
+  border-radius: 4px;
+}
+/* Fim do estilo do Conteúdo Principal */
+
+
+/* Estilo dos Ícones */
+.cart.icon {
+    padding: var(--spacing-sm);
+}
+
+.icon img {
+  height: 30px;
+}
+
+.icon:hover {
+    background-color: var(--hover-color);
+}
+/* Fim do Estilo dos Ícones */
+
+
+/* Animações */
+.off {
+    display: none;
+    opacity: 0;
+    transition: display 0.5s ease-in-out;
+}
+
+.on {
+    display: block;
+    opacity: 1;
+}
+
+.hover {
+    transition: background-color 0.5s ease-in-out;
+}
+
+.hover:hover {
+    background-color: var(--hover-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    border-radius: var(--border-radius-md);
+}
+/* Fim das Animações */
