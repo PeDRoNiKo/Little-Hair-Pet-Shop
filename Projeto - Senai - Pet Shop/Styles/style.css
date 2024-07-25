@@ -1,26 +1,34 @@
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-optical-sizing: auto;
 }
 
 /* TODAS as variáveis globais que serão utilizadas em todo o projeto! */
 :root {
   /* Cores */
-  --primary-color: #6A5ACD; /* Azul Royal */
-  --secondary-color: #e2e2e2; /* Dourado */
-  --background-color: #F0F0F0; /* Cinza Claro */
-  --text-color: #333333; /* Preto Cinza */
-  --white-color: #FFFFFF; /* Branco */
-  --accent-color: #FF69B4; /* Rosa Choque */
-  --hover-color: #EEEDF2; /* Azul Claro */
+  --primary-color: #9747FF;
+  /* Azul Royal */
+  --secondary-color: #e2e2e2;
+  /* Dourado */
+  --background-color: #F0F0F0;
+  /* Cinza Claro */
+  --text-dark-color: #333333;
+  /* Preto Cinza */
+  --text-white-color: #FFFFFF;
+  /* Branco */
+  --accent-color: #FF69B4;
+  /* Rosa Choque */
+  --hover-color: #EEEDF2;
+  /* Azul Claro */
 
   /* Tipografia */
   --font-family: 'Arial, sans-serif';
-  --font-size-base: 16px;
+  --font-size-extra: 48px;
   --font-size-large: 24px;
+  --font-size-base: 16px;
   --font-size-small: 14px;
 
   /* Espaçamento (Baseado no Grid de 8px) */
@@ -44,7 +52,13 @@
   --transition-speed: 0.3s;
   --transition-ease: ease-in-out;
 }
+
 /* Fim das Variáveis globais */
+
+body {
+  overflow-x: hidden;
+  background-color: var(--hover-color);
+}
 
 /* Estilo do Header */
 header {
@@ -52,12 +66,11 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 16px 32px;
-  background-color: var(--white-color);
-  color: #ffffff;
+  background-color: var(--text-white-color);
   box-shadow: var(--box-shadow-sm);
 }
 
-header .logo img{
+header .logo img {
   height: 40px;
 }
 
@@ -68,17 +81,19 @@ header nav ul {
 }
 
 header nav ul li {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-sm);
-    padding: var(--spacing-sm);
-    font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm);
+  font-weight: 600;
 }
 
-header nav ul li a {
+a {
   text-decoration: none;
   color: var(--primary-color);
+  line-height: 0;
 }
+
 /* Fim do Estilo do Header */
 
 
@@ -105,14 +120,14 @@ header nav ul li a {
   align-items: center;
   justify-items: center;
   grid-template-columns: 55% 15%;
-  max-width: 1150px;
+  max-width: 1330px;
   margin: var(--spacing-xl) auto;
 }
 
 .banner h1 {
-  color: var(--text-color);
+  color: var(--primary-color);
   font-family: "Nerko One", cursive;
-  font-size: 40px;
+  font-size: var(--font-size-extra);
 }
 
 .banner .discount {
@@ -120,64 +135,269 @@ header nav ul li a {
   color: var(--primary-color);
 }
 
+/* Categorias do main */
+section.main h3 {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
 .categories {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 16px;
   margin: 32px 0;
+  max-width: 80%;
+  margin: 0 auto;
 }
 
 .category {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   flex: 1 1 calc(33.333% - 16px);
-  background-color: #ffffff;
-  padding: 16px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  min-height: 130px;
+  max-width: 400px;
+  padding: var(--spacing-lg) var(--spacing-md);
 }
 
-.category img {
-  max-width: 100%;
-  border-radius: 4px;
+.category {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: -30px;
+  border-radius: var(--spacing-md);
+  text-align: center;
+  cursor: pointer;
 }
+
+.category::after {
+  content: '';
+  position: absolute;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: var(--spacing-md);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.category.cat-07 {
+  max-width: 1232px;
+  width: 100%;
+  background-position: center;
+  min-height: 250px;
+  margin-bottom: var(--spacing-md);
+}
+
+.cat-title {
+  z-index: 1000;
+  position: relative;
+  color: var(--text-white-color);
+  font-weight: 600;
+}
+
+h2.cat-title {
+  font-size: 20px;
+}
+
+h1.cat-title {
+  font-size: 24px;
+}
+
+p.cat-desc {
+  z-index: 1000;
+  position: relative;
+  color: var(--text-white-color);
+}
+
+/* Fim das Categorias do main */
 /* Fim do estilo do Conteúdo Principal */
 
 
 /* Estilo dos Ícones */
 .cart.icon {
-    padding: var(--spacing-sm);
+  padding: var(--spacing-sm);
 }
 
 .icon img {
   height: 30px;
 }
 
-.icon:hover {
-    background-color: var(--hover-color);
-}
 /* Fim do Estilo dos Ícones */
 
 
 /* Animações */
 .off {
-    display: none;
-    opacity: 0;
-    transition: display 0.5s ease-in-out;
+  display: none;
 }
 
 .on {
-    display: block;
-    opacity: 1;
-}
-
-.hover {
-    transition: background-color 0.5s ease-in-out;
+  display: block;
+  animation: animate 0.3s ease-in;
 }
 
 .hover:hover {
-    background-color: var(--hover-color);
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-    border-radius: var(--border-radius-md);
+  background-color: var(--hover-color);
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  border-radius: var(--border-radius-md);
 }
+
+.icon:hover {
+  background-color: var(--hover-color);
+}
+
+.category:hover {
+  transform: translateY(-8px);
+  transition: all 0.5s ease-in-out;
+}
+
+/* Animação do Header */
+@keyframes animate {
+  from {
+    transform: rotate(-25deg) translateY(15px);
+    opacity: 0;
+    width: 0px;
+  }
+
+  to {
+    transform: rotate(0) translateY(0);
+    opacity: 1;
+    width: 30px;
+  }
+}
+
 /* Fim das Animações */
+
+/* Media Queries - Condicionais do CSS */
+@media (max-width: 1330px) {
+  .banner {
+    max-width: 90%;
+  }
+
+  .banner h1 {
+    font-size: calc(3.5vw - 15%);
+  }
+
+}
+
+/* Fim dos Media Queries - Condicionais do CSS */
+
+
+/* Estilos do Footer */
+/* Footer Styles */
+footer {
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  text-align: left;
+  margin-top: var(--spacing-xl);
+}
+
+footer .newsletter {
+  background-color: var(--secondary-color);
+  padding: var(--spacing-lg);
+  text-align: center;
+}
+
+footer .newsletter h3 {
+  margin-bottom: var(--spacing-md);
+}
+
+footer .newsletter p {
+  margin-top: var(--spacing-sm);
+}
+
+footer .newsletter form {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-sm);
+}
+
+footer .newsletter input[type="email"],
+footer .newsletter input[type="text"] {
+  padding: var(--spacing-md);
+  border: none;
+  border-radius: var(--border-radius-md);
+  outline: none;
+}
+
+footer .newsletter button {
+  padding: var(--spacing-md) var(--spacing-md);
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--text-white-color);
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  transition: background-color var(--transition-speed) var(--transition-ease);
+}
+
+footer .newsletter button:hover {
+  background-color: #7d33e4;
+}
+
+footer .footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--spacing-lg);
+  background-color: var(--text-white-color);
+  padding: var(--spacing-lg);
+  color: var(--white-color);
+}
+
+.footer-section {
+  margin: 0 auto;
+}
+
+footer .footer-section h3 {
+  margin-bottom: var(--spacing-md);
+}
+
+footer .footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer .footer-section ul li {
+  margin-bottom: var(--spacing-xs);
+  padding: var(--spacing-xs) 0;
+}
+
+footer .footer-section ul li a {
+  font-size: var(--font-size-small);
+  text-decoration: none;
+  color: var(--text-dark-color);
+  transition: color var(--transition-speed) var(--transition-ease);
+}
+
+footer .footer-section ul li a:hover {
+  color: var(--primary-color);
+}
+
+footer .app-links {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  background: var(--primary-color);
+  padding: var(--spacing-md);
+  border-radius: var(--spacing-sm);
+}
+
+footer .app-links > img {
+  max-width: 100px;
+  height: auto;
+  border-radius: var(--spacing-xs);
+}
+
+footer .img-links {
+  display: grid;
+  justify-content: center;
+  gap: 8px;
+}
+
+footer .img-links img {
+  max-width: 160px;
+}
+/* Fim dos Estilos do Footer */

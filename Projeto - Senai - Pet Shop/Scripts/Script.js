@@ -1,10 +1,11 @@
-let element_li = document.querySelectorAll('header li.hover');
-let event_off = document.querySelectorAll('.off');
-let event_on = document.querySelectorAll('.on');
+// Variáveis para o código
+const element_li = document.querySelectorAll('header li.hover');
+const event_off = document.querySelectorAll('.off');
+const event_on = document.querySelectorAll('.on');
+const categories = document.querySelectorAll('article.category');
 
 // Criando a animação na barra de navegação.
 element_li.forEach((i) => {
-
     i.addEventListener('mouseover', () => {
         document.querySelector('.icon.on').classList.add('off');
         document.querySelector('.icon.on').classList.remove('on');
@@ -17,9 +18,22 @@ element_li.forEach((i) => {
         i.addEventListener('mouseleave', () => {
             document.querySelector('.icon.on').classList.add('off');
             document.querySelector('.icon.on').classList.remove('on');
-
             document.querySelector('.home.icon').classList.add('on');
         });
     });
 
+});
+
+// Colocando o background-image no css
+categories.forEach((i) => {
+    const data_name = i.getAttribute('data-name');
+    const img_url = `url('./Images/${data_name}.png')`;
+    i.style.backgroundImage = img_url;
 })
+
+// Permitindo que elementos sejam clicáveis com url
+categories.forEach((i) => {
+    i.addEventListener('click', () => {
+        window.location.href = i.getAttribute('data-url');
+    });
+});
