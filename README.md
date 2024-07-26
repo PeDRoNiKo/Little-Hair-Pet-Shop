@@ -7,12 +7,12 @@ Leiam 👉 [Guia de Padronização de Design para Website](https://github.com/li
 **Seguindo o Guia criem as telas usando html e css:**
 
 Tela 01
-![Tela 01](https://github.com/user-attachments/assets/e9f27106-641a-4e01-88f2-f4ac9be368ff)
-(Já foi iniciado para demonstrar! Apenas concluir)
+![Store-Products(1)](https://github.com/user-attachments/assets/644dc20f-8b10-4d26-8a87-673aa8e5bc7f)
+(Tela da Loja dos produtos)
 
 Tela 02
-![Tela 02](https://github.com/user-attachments/assets/478c3d52-3e27-4a29-a844-e9565cd188ad)
-(Ainda não iniciada)
+![Store-Products(1)](https://github.com/user-attachments/assets/af980b8e-cdda-40fe-8da6-48a013207b11)
+(Tela de Detalhes do produto)
 
 Façam o download deste diretório e utilizem o `LIVE SHARE` para fazerem código colaborativo. Assim todos poderão trabalhar juntos e ao mesmo tempo.
 Basta iniciar em uma máquina e compartilharem o link do host para os demais!!!
