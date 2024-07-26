@@ -7,7 +7,7 @@ Leiam 👉 [Guia de Padronização de Design para Website](https://github.com/li
 **Seguindo o Guia criem as telas usando html e css:**
 
 Tela 01
-![Store-Products(1)](https://github.com/user-attachments/assets/644dc20f-8b10-4d26-8a87-673aa8e5bc7f)
+![Store-Products(2)](https://github.com/user-attachments/assets/29c4603d-83cb-4916-a863-5eaa3b185ae7)
 (Tela da Loja dos produtos)
 
 Tela 02
