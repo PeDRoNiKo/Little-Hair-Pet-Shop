@@ -87,7 +87,7 @@ article.main {
     width: fit-content;
     border-radius: var(--border-radius-lg);
     margin: 0 auto;
-    box-shadow: 1px 1px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.16);
 }
 
 /* Lista de Opções */
@@ -113,6 +113,13 @@ article.main {
     padding: var(--spacing-md);
     background-color: var(--hover-color);
     border-radius: var(--border-radius-md);
+    cursor: pointer;
+    user-select: none;
+    transition: background-color ease-in-out 0.5s;
+}
+
+span {
+    line-height: 0;
 }
 
 /* Formulário de Login */
@@ -147,6 +154,18 @@ button.btn {
     border-radius: var(--border-radius-md);
     outline: none;
     margin-top: var(--spacing-sm);
+    cursor: pointer;
+    transition: background-color ease-in-out 0.5s;
 }
 
 /* Fim do Estilo do Main */
+
+/* Animação nas Opções */
+li.li-el:hover {
+    background-color: hsl(250, 11%, 89%);
+}
+
+button.btn:hover {
+    background-color: #7d33e4;
+}
+/* Fim da Animação nas Opções */
