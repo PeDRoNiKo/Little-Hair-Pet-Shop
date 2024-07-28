@@ -141,7 +141,7 @@ section.main h3 {
   margin-bottom: 8px;
 }
 
-.categories {
+.flex-content {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -217,6 +217,10 @@ p.cat-desc {
 
 
 /* Estilo dos Ícones */
+div.icon {
+  line-height: 0;
+}
+
 .cart.icon {
   padding: var(--spacing-sm);
 }
@@ -249,7 +253,7 @@ p.cat-desc {
   background-color: var(--hover-color);
 }
 
-.category:hover {
+.category:hover, .product-i:hover {
   transform: translateY(-8px);
   transition: all 0.5s ease-in-out;
 }
@@ -315,8 +319,8 @@ footer .newsletter form {
   gap: var(--spacing-sm);
 }
 
-footer .newsletter input[type="email"],
-footer .newsletter input[type="text"] {
+input[type="email"],
+input[type="text"] {
   padding: var(--spacing-md);
   border: none;
   border-radius: var(--border-radius-md);
@@ -385,7 +389,7 @@ footer .app-links {
   border-radius: var(--spacing-sm);
 }
 
-footer .app-links > img {
+footer .app-links>img {
   max-width: 100px;
   height: auto;
   border-radius: var(--spacing-xs);
@@ -400,4 +404,5 @@ footer .img-links {
 footer .img-links img {
   max-width: 160px;
 }
+
 /* Fim dos Estilos do Footer */
